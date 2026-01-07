@@ -8,9 +8,9 @@ const isDevelopmentEnv = (environment === 'development');
 
 export default [
 	{
-		input: 'lib/broker.js',
+		input: 'lib/udf-compatible-datafeed.js',
 		output: {
-			name: 'Brokers',
+			name: 'Datafeeds',
 			format: 'umd',
 			file: 'dist/bundle.js',
 		},

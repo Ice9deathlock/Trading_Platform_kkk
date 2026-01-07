@@ -1,0 +1,148 @@
+/* Order Book Container */
+.order-book {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Order Book Sections */
+.order-book-section {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.order-book-section h4 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  padding: 0 8px;
+}
+
+/* Order Book Spread */
+.order-book-spread {
+  padding: 8px 16px;
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  background-color: #fafafa;
+}
+
+/* Order Book Table */
+.order-book .ant-table {
+  font-size: 12px;
+  background: transparent;
+}
+
+.order-book .ant-table-thead > tr > th {
+  background: #fafafa;
+  color: #666;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.order-book .ant-table-tbody > tr > td {
+  padding: 2px 8px;
+  border-bottom: 1px solid #f5f5f5;
+  position: relative;
+}
+
+/* Order Book Rows */
+.order-book-row {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.order-book-row:hover {
+  background-color: #f9f9f9;
+}
+
+/* Price Colors */
+.buy-price {
+  color: #f6465d;
+}
+
+.sell-price {
+  color: #0ecb81;
+}
+
+/* Depth Indicators */
+.order-book .buy-depth,
+.order-book .sell-depth {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.order-book .buy-depth {
+  background-color: #f6465d;
+  right: 50%;
+}
+
+.order-book .sell-depth {
+  background-color: #0ecb81;
+  left: 50%;
+  right: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .order-book {
+    font-size: 11px;
+  }
+  
+  .order-book .ant-table-thead > tr > th,
+  .order-book .ant-table-tbody > tr > td {
+    padding: 2px 4px;
+  }
+}
+
+/* Dark Mode Support */
+[data-theme='dark'] .order-book-section h4 {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+[data-theme='dark'] .order-book-spread {
+  color: rgba(255, 255, 255, 0.45);
+  border-color: #303030;
+  background-color: #1f1f1f;
+}
+
+[data-theme='dark'] .order-book .ant-table-thead > tr > th {
+  background: #1f1f1f;
+  color: rgba(255, 255, 255, 0.65);
+  border-bottom-color: #303030;
+}
+
+[data-theme='dark'] .order-book .ant-table-tbody > tr > td {
+  border-bottom-color: #303030;
+}
+
+[data-theme='dark'] .order-book-row:hover {
+  background-color: #2a2a2a;
+}
+
+[data-theme='dark'] .buy-price {
+  color: #ff4d4f;
+}
+
+[data-theme='dark'] .sell-price {
+  color: #52c41a;
+}
+
+[data-theme='dark'] .order-book .buy-depth {
+  background-color: #ff4d4f;
+}
+
+[data-theme='dark'] .order-book .sell-depth {
+  background-color: #52c41a;
+}

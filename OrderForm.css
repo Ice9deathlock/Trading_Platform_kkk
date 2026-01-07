@@ -1,0 +1,185 @@
+/* Order Form Container */
+.order-form-card {
+  height: 100%;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form Header */
+.order-form-card .ant-card-head {
+  background: #fafafa;
+  border-bottom: 1px solid #f0f0f0;
+  min-height: 48px;
+  padding: 0 16px;
+}
+
+.order-form-card .ant-card-head-title {
+  padding: 12px 0;
+}
+
+.order-form-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.side-toggle {
+  flex: 1;
+  height: 36px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.side-toggle:not(.ant-btn-primary) {
+  background: #f5f5f5;
+  border-color: #d9d9d9;
+}
+
+.order-type-select {
+  width: 100px;
+}
+
+/* Form Content */
+.order-form-card .ant-card-body {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Balance Info */
+.balance-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 12px;
+  color: #666;
+}
+
+/* Form Inputs */
+.order-form-card .ant-form-item {
+  margin-bottom: 16px;
+}
+
+.order-form-card .ant-input,
+.order-form-card .ant-input-number,
+.order-form-card .ant-select-selector {
+  height: 40px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.order-form-card .ant-input-suffix {
+  color: #666;
+  font-size: 12px;
+}
+
+/* Action Buttons */
+.buy-button {
+  background: #0ecb81;
+  border-color: #0ecb81;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.buy-button:hover,
+.buy-button:focus {
+  background: #0dbd78;
+  border-color: #0dbd78;
+}
+
+.sell-button {
+  background: #f6465d;
+  border-color: #f6465d;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.sell-button:hover,
+.sell-button:focus {
+  background: #e63d53;
+  border-color: #e63d53;
+}
+
+/* Order Summary */
+.order-summary {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: #666;
+}
+
+.summary-row:last-child {
+  margin-bottom: 0;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .order-form-card {
+    margin-bottom: 16px;
+  }
+  
+  .order-form-card .ant-card-body {
+    padding: 12px;
+  }
+  
+  .buy-button,
+  .sell-button {
+    height: 44px;
+    font-size: 15px;
+  }
+}
+
+/* Dark Mode Support */
+[data-theme='dark'] .order-form-card .ant-card-head {
+  background: #1f1f1f;
+  border-bottom-color: #303030;
+}
+
+[data-theme='dark'] .side-toggle:not(.ant-btn-primary) {
+  background: #2a2a2a;
+  border-color: #434343;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+[data-theme='dark'] .balance-info {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+[data-theme='dark'] .summary-row {
+  color: rgba(255, 255, 255, 0.45);
+  border-top-color: #303030;
+}
+
+[data-theme='dark'] .summary-row:last-child {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+[data-theme='dark'] .order-form-card .ant-input,
+[data-theme='dark'] .order-form-card .ant-input-number,
+[data-theme='dark'] .order-form-card .ant-select-selector {
+  background-color: #1f1f1f;
+  border-color: #434343;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+[data-theme='dark'] .order-form-card .ant-input-suffix {
+  color: rgba(255, 255, 255, 0.45);
+}
